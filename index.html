@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elma Kehar | Personal Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f2effa;
+    color: #39304b;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(76, 53, 113, 0.12);
+}
+
+header {
+    background: #49366f;
+    color: white;
+    padding: 22px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #eee6ff;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d4baff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 65px 55px;
+    background: linear-gradient(120deg, #f5f0ff, #ebe3fa);
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro small {
+    color: #8664b6;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.intro h1 {
+    font-size: 49px;
+    color: #49366f;
+    margin: 15px 0 5px;
+}
+
+.intro h3 {
+    color: #8664b6;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.intro p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.profile {
+    width: 260px;
+    height: 310px;
+    flex-shrink: 0;
+    border: 8px solid white;
+    border-radius: 140px 140px 25px 25px;
+    overflow: hidden;
+    background: #ded0f4;
+    box-shadow: 0 10px 30px rgba(73, 54, 111, 0.2);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 11px 25px;
+    background: #674c91;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #49366f;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 38px 55px;
+}
+
+section h2 {
+    color: #59417f;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e4d9f5;
+    padding-bottom: 10px;
+}
+
+section p {
+    font-size: 15px;
+}
+
+.about {
+    background: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #f5f1fc;
+    padding: 22px;
+    border-radius: 13px;
+    border-left: 4px solid #9475c2;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(73, 54, 111, 0.1);
+}
+
+.card h3 {
+    color: #604681;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.skills {
+    background: #f5f1fc;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-list span {
+    background: #674c91;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skill-list span:hover {
+    background: #9879c4;
+    transform: translateY(-3px);
+}
+
+.goal {
+    background: #f5f1fc;
+    border-left: 5px solid #9475c2;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.contact {
+    background: white;
+}
+
+.contact p {
+    margin: 8px 0;
+}
+
+footer {
+    background: #49366f;
+    color: #f3ebff;
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 22px;
+    }
+
+    nav a {
+        margin: 0 6px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 25px;
+    }
+
+    .profile {
+        width: 215px;
+        height: 260px;
+    }
+
+    .intro h1 {
+        font-size: 37px;
+    }
+
+    section {
+        padding: 30px 23px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<header>
+    <div class="logo">ELMA KEHAR.</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+
+    <div class="intro">
+        <small>WELCOME TO MY PORTFOLIO</small>
+
+        <h1>Elma Kehar</h1>
+
+        <h3>BSIT Student | Aspiring IT Professional</h3>
+
+        <p>
+            Hello! I am Elma Kehar, a passionate Information
+            Technology student currently studying in my
+            third year. I am interested in programming,
+            cybersecurity, web development and modern
+            technologies. I love learning new skills and
+            exploring opportunities to grow professionally.
+        </p>
+
+        <a href="#about" class="btn">Explore My Portfolio</a>
+    </div>
+
+    <div class="profile">
+        <img src="profile.jpg.jpeg" alt="Elma Kehar Profile Picture">
+    </div>
+
+</div>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+
+    <p>
+        My name is Elma Kehar and my father's name is
+        Imdad Hussain. I belong to a supportive family
+        that encourages me to pursue my education and
+        achieve my dreams.
+
+        I am a dedicated Information Technology student
+        with a passion for technology, creativity and
+        continuous learning. My aim is to develop strong
+        technical and professional skills.
+    </p>
+</section>
+
+<section id="education">
+    <h2>Education & Qualifications</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Bachelor of Science in IT</h3>
+            <p>
+                Currently studying BS Information Technology,
+                Third Year.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cybersecurity Course</h3>
+            <p>
+                Completed a cybersecurity course and gained
+                knowledge of cybersecurity concepts and practices.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Programming Knowledge</h3>
+            <p>
+                Learned programming languages and web
+                development technologies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Professional Development</h3>
+            <p>
+                Interested in improving technical knowledge,
+                practical experience and problem-solving skills.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2>My Technical Skills</h2>
+
+    <div class="skill-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Bootstrap</span>
+        <span>JavaScript</span>
+    </div>
+</section>
+
+<section>
+    <h2>Internship Experience</h2>
+
+    <div class="card">
+        <h3>Technify Academy</h3>
+        <p><b>Internship | 2026</b></p>
+
+        <p>
+            I completed an internship at Technify Academy
+            during 2026. This experience provided me with
+            professional exposure and an opportunity to
+            enhance my technical knowledge and learning skills.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>My Future Goals</h2>
+
+    <div class="goal">
+        <p>
+            My biggest academic goal is to pursue higher
+            education in Germany through a scholarship.
+
+            After completing my bachelor's degree, I plan
+            to continue my studies internationally by
+            pursuing an MPhil or PhD.
+
+            I want to expand my knowledge, explore research
+            opportunities and build a successful career
+            in the field of Information Technology.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>My Interests</h2>
+
+    <p>
+        Cybersecurity | Programming | Web Development |
+        Software Development | Cloud Computing |
+        Research | New Technologies
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact & Personal Information</h2>
+
+    <p><b>Name:</b> Elma Kehar</p>
+    <p><b>Father's Name:</b> Imdad Hussain</p>
+    <p><b>Roll Number:</b> 2k24/ITE/32</p>
+    <p><b>Program:</b> BS Information Technology</p>
+    <p><b>Academic Level:</b> Third Year</p>
+</section>
+
+<footer>
+    <p>Designed with passion by Elma Kehar</p>
+    <p>My Personal Portfolio | 2026</p>
+</footer>
+
+</main>
+
+</body>
+</html>
